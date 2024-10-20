@@ -27,7 +27,7 @@ export default function TabsLayout() {
         name="post"
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesome name="plus-square-o" size={26} color={color} />
+            <FontAwesome name="plus-square-o" size={28} color={color} />
           ),
         }}
       />
@@ -35,7 +35,7 @@ export default function TabsLayout() {
         name="reels"
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name="smart-display" size={29} color="black" />
+            <MaterialIcons name="smart-display" size={29} color={color} />
           ),
         }}
       />
@@ -44,7 +44,7 @@ export default function TabsLayout() {
         name="profile"
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesome name="user-circle-o" size={26} color="black" />
+            <FontAwesome name="user-circle-o" size={26} color={color} />
           ),
         }}
       />
