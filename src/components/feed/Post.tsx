@@ -5,10 +5,10 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from '@expo/vector-icons/Feather';
 
 const Post = ({data}) => {
-    console.log(data);
+  
   return (
-    <View className="">
-      <View className="flex-row h-[45px] items-center justify-between gap-2">
+    <View className="my-3">
+      <View className="flex-row h-[45px] items-center justify-between gap-2 ">
         <View className="flex-row items-center">
           <Image
             source={{ uri: data.user.image_url }}

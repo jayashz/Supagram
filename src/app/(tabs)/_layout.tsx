@@ -1,15 +1,17 @@
 import { Tabs } from "expo-router";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+
 export default function TabsLayout() {
   return (
+
     <Tabs
-      screenOptions={{ tabBarActiveTintColor: "black", tabBarShowLabel: false }}
+      screenOptions={{ tabBarActiveTintColor: "black", tabBarShowLabel: false, headerShown:false,
+      }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          headerTitle: "For you",
           tabBarIcon: ({ color }) => (
             <MaterialIcons name="home-filled" size={26} color={color} />
           ),
@@ -49,5 +51,6 @@ export default function TabsLayout() {
         }}
       />
     </Tabs>
+
   );
 }
