@@ -50,6 +50,9 @@ export default function TabsLayout() {
           ),
         }}
       />
+      <Tabs.Screen name="inbox" options={{tabBarButton:()=>null,tabBarStyle:{
+        display:'none'
+      }}}/>
     </Tabs>
 
   );

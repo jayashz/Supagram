@@ -8,10 +8,10 @@ import { SafeAreaView } from "react-native";
 
 
 const index = () => {
-  return (
+  return (  
     <SafeAreaView className="flex-1">
-    <View className="flex-1 bg-white">
       <Header/>
+    <View className="flex-1 bg-white">
         <FlatList className="" data={data} contentContainerStyle={{maxWidth:512,width:'100%',alignSelf:'center'}} renderItem={(item)=><Post data={item.item} />}/>
      
     </View>
