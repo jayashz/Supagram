@@ -1,12 +1,19 @@
 import { Tabs } from "expo-router";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { PressableOpacity } from "react-native-pressable-opacity";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+
+import { router } from "expo-router";
+import Header from "../../components/feed/Header";
 
 export default function TabsLayout() {
   return (
-
     <Tabs
-      screenOptions={{ tabBarActiveTintColor: "black", tabBarShowLabel: false, headerShown:false,
+      screenOptions={{
+        tabBarActiveTintColor: "black",
+        tabBarShowLabel: false,
+        headerShown: false,
       }}
     >
       <Tabs.Screen
@@ -15,6 +22,14 @@ export default function TabsLayout() {
           tabBarIcon: ({ color }) => (
             <MaterialIcons name="home-filled" size={26} color={color} />
           ),
+          headerShown: true,
+          headerRight: () => (
+            <PressableOpacity onPress={() => router.navigate("inbox")} className="mr-3">
+              <FontAwesome5 name="facebook-messenger" size={24} color="black" />
+            </PressableOpacity>
+          ),
+          headerTitle:()=><Header/>,
+          headerTitleAlign:'left'
         }}
       />
       <Tabs.Screen
@@ -50,10 +65,15 @@ export default function TabsLayout() {
           ),
         }}
       />
-      <Tabs.Screen name="inbox" options={{tabBarButton:()=>null,tabBarStyle:{
-        display:'none'
-      }}}/>
+      <Tabs.Screen
+        name="inbox"
+        options={{
+          tabBarButton: () => null,
+          tabBarStyle: {
+            display: "none",
+          },
+        }}
+      />
     </Tabs>
-
   );
 }
