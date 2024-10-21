@@ -5,11 +5,13 @@ import { data } from "../../../assets/data/posts";
 import { FlatList } from "react-native";
 import Header from "../../components/feed/Header";
 import { SafeAreaView } from "react-native";
+import Stories from "../../components/feed/Stories";
 
 const index = () => {
   return (
     <SafeAreaView className="flex-1">
       <View className="flex-1 bg-white">
+        <Stories />
         <FlatList
           className=""
           data={data}

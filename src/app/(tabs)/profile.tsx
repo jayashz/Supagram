@@ -5,6 +5,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import CustBtn from "../../components/CustBtn";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import {Tabs} from 'expo-router'
 const profile = () => {
   return (
     <SafeAreaView className="flex-1">
@@ -58,6 +59,11 @@ const profile = () => {
           <CustBtn onPress={() => console.warn("pressed")}>
             <Ionicons name="person-add-outline" size={18} color="black" />
           </CustBtn>
+        </View>
+        <View>
+          <Text>
+            Top tabs here
+          </Text>
         </View>
       </View>
     </SafeAreaView>

@@ -29,7 +29,9 @@ const post = () => {
       });
       if (image) {
         setImage(image.assets[0].uri);
-      } 
+      }
+
+     
     }catch(error){
       console.log('error')
     }
@@ -38,7 +40,8 @@ const post = () => {
   return (
     <SafeAreaView className="flex-1">
       <View className="flex-row justify-between items-cente mx-3">
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+        
+        <TouchableOpacity onPress={() => navigation.navigate('index')}>
           <Feather name="x" size={24} color="black" />
         </TouchableOpacity>
         <Text>New post </Text>
