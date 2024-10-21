@@ -3,9 +3,10 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { PressableOpacity } from "react-native-pressable-opacity";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-
+import AntDesign from "@expo/vector-icons/AntDesign";
 import { router } from "expo-router";
 import Header from "../../components/feed/Header";
+import { View } from "react-native";
 
 export default function TabsLayout() {
   return (
@@ -24,9 +25,14 @@ export default function TabsLayout() {
           ),
           headerShown: true,
           headerRight: () => (
+            <View className="flex-row gap-5">
+              <PressableOpacity>
+              <AntDesign name="hearto" size={24} color="black" />
+              </PressableOpacity>
             <PressableOpacity onPress={() => router.navigate("inbox")} className="mr-3">
               <FontAwesome5 name="facebook-messenger" size={24} color="black" />
             </PressableOpacity>
+            </View>
           ),
           headerTitle:()=><Header/>,
           headerTitleAlign:'left'
